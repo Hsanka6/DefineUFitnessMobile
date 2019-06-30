@@ -15,6 +15,7 @@
 		701E37DA22C9324C00E450A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701E37D822C9324C00E450A9 /* LaunchScreen.storyboard */; };
 		701E37E522C9324C00E450A9 /* DefineUFitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37E422C9324C00E450A9 /* DefineUFitnessTests.swift */; };
 		701E37F022C9324C00E450A9 /* DefineUFitnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37EF22C9324C00E450A9 /* DefineUFitnessUITests.swift */; };
+		701E37FE22C9345B00E450A9 /* ExerciseDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		701E37EB22C9324C00E450A9 /* DefineUFitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefineUFitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		701E37EF22C9324C00E450A9 /* DefineUFitnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineUFitnessUITests.swift; sourceTree = "<group>"; };
 		701E37F122C9324C00E450A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDayTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				701E37D622C9324C00E450A9 /* Assets.xcassets */,
 				701E37D822C9324C00E450A9 /* LaunchScreen.storyboard */,
 				701E37DB22C9324C00E450A9 /* Info.plist */,
+				701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */,
 			);
 			path = DefineUFitness;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				701E37D222C9324A00E450A9 /* SecondViewController.swift in Sources */,
 				701E37CE22C9324A00E450A9 /* AppDelegate.swift in Sources */,
+				701E37FE22C9345B00E450A9 /* ExerciseDayTableViewCell.swift in Sources */,
 				701E37D022C9324A00E450A9 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
