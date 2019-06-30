@@ -1,0 +1,6 @@
+framework module Pods_DefineUFitness {
+  umbrella header "Pods-DefineUFitness-umbrella.h"
+
+  export *
+  module * { export * }
+}
