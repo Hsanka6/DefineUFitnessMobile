@@ -19,6 +19,8 @@
 		701E37F022C9324C00E450A9 /* DefineUFitnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37EF22C9324C00E450A9 /* DefineUFitnessUITests.swift */; };
 		701E37FE22C9345B00E450A9 /* ExerciseDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */; };
 		701E380022C940B700E450A9 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37FF22C940B700E450A9 /* NutritionViewController.swift */; };
+		70DC467322CD461A00C19D9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70DC467222CD461A00C19D9B /* GoogleService-Info.plist */; };
+		70DC467522CD49FD00C19D9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC467422CD49FD00C19D9B /* LoginViewController.swift */; };
 		C9B24B473EF4D623DADCB59F /* Pods_DefineUFitnessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6D7D83B7A66874177163FB /* Pods_DefineUFitnessUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		701E37F122C9324C00E450A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDayTableViewCell.swift; sourceTree = "<group>"; };
 		701E37FF22C940B700E450A9 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
+		70DC467222CD461A00C19D9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70DC467422CD49FD00C19D9B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A384ED5DE281FE3C59186BA /* Pods-DefineUFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefineUFitness.debug.xcconfig"; path = "Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness.debug.xcconfig"; sourceTree = "<group>"; };
 		7C424C19941B6085AB2D00FE /* Pods-DefineUFitnessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefineUFitnessTests.release.xcconfig"; path = "Target Support Files/Pods-DefineUFitnessTests/Pods-DefineUFitnessTests.release.xcconfig"; sourceTree = "<group>"; };
 		86CA784FA42B94906EFAD485 /* Pods_DefineUFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefineUFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,12 +127,14 @@
 				701E37CD22C9324A00E450A9 /* AppDelegate.swift */,
 				701E37CF22C9324A00E450A9 /* FirstViewController.swift */,
 				701E37D122C9324A00E450A9 /* SecondViewController.swift */,
+				70DC467222CD461A00C19D9B /* GoogleService-Info.plist */,
 				701E37D322C9324A00E450A9 /* Main.storyboard */,
 				701E37D622C9324C00E450A9 /* Assets.xcassets */,
 				701E37D822C9324C00E450A9 /* LaunchScreen.storyboard */,
 				701E37DB22C9324C00E450A9 /* Info.plist */,
 				701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */,
 				701E37FF22C940B700E450A9 /* NutritionViewController.swift */,
+				70DC467422CD49FD00C19D9B /* LoginViewController.swift */,
 			);
 			path = DefineUFitness;
 			sourceTree = "<group>";
@@ -171,7 +177,6 @@
 				525141C8AE5DA547AF2FC07E /* Pods-DefineUFitnessUITests.debug.xcconfig */,
 				E17E10AE2116F1DE66E4EF36 /* Pods-DefineUFitnessUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -186,6 +191,8 @@
 				701E37C622C9324A00E450A9 /* Sources */,
 				701E37C722C9324A00E450A9 /* Frameworks */,
 				701E37C822C9324A00E450A9 /* Resources */,
+				6EC17E5ACBC5DB41B883446F /* [CP] Embed Pods Frameworks */,
+				219A3346CC52EC2072742945 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				701E37DA22C9324C00E450A9 /* LaunchScreen.storyboard in Resources */,
+				70DC467322CD461A00C19D9B /* GoogleService-Info.plist in Resources */,
 				701E37D722C9324C00E450A9 /* Assets.xcassets in Resources */,
 				701E37D522C9324A00E450A9 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +335,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		219A3346CC52EC2072742945 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		434E180B3BF19EFC2C6CF025 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +377,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EC17E5ACBC5DB41B883446F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B32768EDDFFEB868A687C5B6 /* [CP] Check Pods Manifest.lock */ = {
@@ -378,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DC467522CD49FD00C19D9B /* LoginViewController.swift in Sources */,
 				701E37D222C9324A00E450A9 /* SecondViewController.swift in Sources */,
 				701E380022C940B700E450A9 /* NutritionViewController.swift in Sources */,
 				701E37CE22C9324A00E450A9 /* AppDelegate.swift in Sources */,
@@ -565,7 +624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haasith.DefineUFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DefineUFitness.DefineUFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -584,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haasith.DefineUFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DefineUFitness.DefineUFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
