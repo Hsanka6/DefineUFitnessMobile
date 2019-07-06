@@ -8,16 +8,42 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+import FirebaseAuth
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+    
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         return true
+    }
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        print("Disconnected")
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let err = error{
+            print(err)
+        }
+        
+        guard let idToken = user.authentication.idToken else {
+            return
+        }
+        guard let accessToken = user.authentication.accessToken else {
+            return
+        }
+        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+        
+        Auth.auth().signIn(with: credentials) { [weak self] user, error in
+            guard let strongSelf = self else { return }
+            // ...
+        }
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
