@@ -12,39 +12,53 @@ import GoogleSignIn
 import FirebaseAuth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate{
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
+
         return true
     }
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        print("Disconnected")
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let err = error{
-            print(err)
-        }
-        
-        guard let idToken = user.authentication.idToken else {
-            return
-        }
-        guard let accessToken = user.authentication.accessToken else {
-            return
-        }
-        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-        
-        Auth.auth().signIn(with: credentials) { [weak self] user, error in
-            guard let strongSelf = self else { return }
-            // ...
-        }
-        
-    }
+//
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url,
+//                                                 sourceApplication: sourceApplication,
+//                                                 annotation: annotation)
+//    }
+//
+//
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+//        print("Disconnected")
+//    }
+//
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        if let err = error{
+//            print(err)
+//        }
+//
+//        guard let idToken = user.authentication.idToken else {
+//            return
+//        }
+//        guard let accessToken = user.authentication.accessToken else {
+//            return
+//        }
+//        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+//
+//        Auth.auth().signIn(with: credentials) { (authResult, error) in
+//            if let error = error {
+//                print(error)
+//                return
+//            }
+//            print("Signed in")
+//
+//        }
+//
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
