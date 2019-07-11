@@ -21,6 +21,7 @@
 		701E380022C940B700E450A9 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E37FF22C940B700E450A9 /* NutritionViewController.swift */; };
 		7045EAC022D3D06200867446 /* CalorieTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */; };
 		7045EAC222D3E5C700867446 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045EAC122D3E5C700867446 /* TabBarController.swift */; };
+		70B46CEA22D6F1F1006C6C63 /* DailyExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46CE922D6F1F1006C6C63 /* DailyExerciseViewController.swift */; };
 		70DC467322CD461A00C19D9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70DC467222CD461A00C19D9B /* GoogleService-Info.plist */; };
 		70DC467522CD49FD00C19D9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC467422CD49FD00C19D9B /* LoginViewController.swift */; };
 		C9B24B473EF4D623DADCB59F /* Pods_DefineUFitnessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6D7D83B7A66874177163FB /* Pods_DefineUFitnessUITests.framework */; };
@@ -65,6 +66,7 @@
 		701E37FF22C940B700E450A9 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerViewController.swift; sourceTree = "<group>"; };
 		7045EAC122D3E5C700867446 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		70B46CE922D6F1F1006C6C63 /* DailyExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExerciseViewController.swift; sourceTree = "<group>"; };
 		70DC467222CD461A00C19D9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70DC467422CD49FD00C19D9B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A384ED5DE281FE3C59186BA /* Pods-DefineUFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefineUFitness.debug.xcconfig"; path = "Target Support Files/Pods-DefineUFitness/Pods-DefineUFitness.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,18 +130,16 @@
 		701E37CC22C9324A00E450A9 /* DefineUFitness */ = {
 			isa = PBXGroup;
 			children = (
+				70B46CEC22D6F975006C6C63 /* Nutrition */,
+				70B46CEB22D6F96B006C6C63 /* Exercises */,
 				701E37CD22C9324A00E450A9 /* AppDelegate.swift */,
-				701E37CF22C9324A00E450A9 /* FirstViewController.swift */,
 				701E37D122C9324A00E450A9 /* SecondViewController.swift */,
 				70DC467222CD461A00C19D9B /* GoogleService-Info.plist */,
 				701E37D322C9324A00E450A9 /* Main.storyboard */,
 				701E37D622C9324C00E450A9 /* Assets.xcassets */,
 				701E37D822C9324C00E450A9 /* LaunchScreen.storyboard */,
 				701E37DB22C9324C00E450A9 /* Info.plist */,
-				701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */,
-				701E37FF22C940B700E450A9 /* NutritionViewController.swift */,
 				70DC467422CD49FD00C19D9B /* LoginViewController.swift */,
-				7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */,
 				7045EAC122D3E5C700867446 /* TabBarController.swift */,
 			);
 			path = DefineUFitness;
@@ -161,6 +161,25 @@
 				701E37F122C9324C00E450A9 /* Info.plist */,
 			);
 			path = DefineUFitnessUITests;
+			sourceTree = "<group>";
+		};
+		70B46CEB22D6F96B006C6C63 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				701E37CF22C9324A00E450A9 /* FirstViewController.swift */,
+				701E37FD22C9345B00E450A9 /* ExerciseDayTableViewCell.swift */,
+				70B46CE922D6F1F1006C6C63 /* DailyExerciseViewController.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		70B46CEC22D6F975006C6C63 /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				701E37FF22C940B700E450A9 /* NutritionViewController.swift */,
+				7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */,
+			);
+			path = Nutrition;
 			sourceTree = "<group>";
 		};
 		8EF0C55A4082B7FB4E531266 /* Frameworks */ = {
@@ -449,6 +468,7 @@
 				701E380022C940B700E450A9 /* NutritionViewController.swift in Sources */,
 				701E37CE22C9324A00E450A9 /* AppDelegate.swift in Sources */,
 				701E37FE22C9345B00E450A9 /* ExerciseDayTableViewCell.swift in Sources */,
+				70B46CEA22D6F1F1006C6C63 /* DailyExerciseViewController.swift in Sources */,
 				701E37D022C9324A00E450A9 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
