@@ -9,7 +9,6 @@
 import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     var dates = ["1/2/22","1/3/22"]
     var selectedDate:String?
     @IBOutlet var tableView: UITableView!
@@ -21,7 +20,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +35,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedDate = dates[indexPath.row]
+        performSegue(withIdentifier: "toDailyExercise", sender: nil)
     }
 
     
@@ -50,7 +49,5 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
-
-
 }
 

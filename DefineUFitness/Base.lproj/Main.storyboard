@@ -289,7 +289,7 @@
                                         <rect key="frame" x="0.0" y="58" width="375" height="476"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="90V-8A-TZn" style="IBUITableViewCellStyleDefault" id="1Kq-uq-fXi">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="90V-8A-TZn" style="IBUITableViewCellStyleDefault" id="1Kq-uq-fXi">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Kq-uq-fXi" id="fXx-v3-9sn">
@@ -315,6 +315,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="iZI-rt-oTi" secondAttribute="trailing" constant="15" id="GCc-Sd-bKR"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Iy-Qs-gWh" secondAttribute="bottom" id="HmT-iR-g5j"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Iy-Qs-gWh" secondAttribute="trailing" id="LVw-jo-vic"/>
+                                    <constraint firstItem="4Iy-Qs-gWh" firstAttribute="leading" secondItem="j2V-Nw-qfF" secondAttribute="leading" id="PvS-kh-tcz"/>
                                     <constraint firstItem="iZI-rt-oTi" firstAttribute="leading" secondItem="j2V-Nw-qfF" secondAttribute="leading" constant="15" id="oaH-md-x4c"/>
                                 </constraints>
                             </stackView>
