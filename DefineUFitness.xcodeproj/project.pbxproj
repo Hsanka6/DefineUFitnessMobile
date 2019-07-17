@@ -22,6 +22,7 @@
 		7045EAC022D3D06200867446 /* CalorieTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */; };
 		7045EAC222D3E5C700867446 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045EAC122D3E5C700867446 /* TabBarController.swift */; };
 		709B504722D9765E0018AD9C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B504622D9765E0018AD9C /* Color.swift */; };
+		709B504A22D9794D0018AD9C /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B504922D9794D0018AD9C /* DailyExercise.swift */; };
 		70B46CEA22D6F1F1006C6C63 /* DailyExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46CE922D6F1F1006C6C63 /* DailyExerciseViewController.swift */; };
 		70DC467322CD461A00C19D9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70DC467222CD461A00C19D9B /* GoogleService-Info.plist */; };
 		70DC467522CD49FD00C19D9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC467422CD49FD00C19D9B /* LoginViewController.swift */; };
@@ -68,6 +69,7 @@
 		7045EABF22D3D06200867446 /* CalorieTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerViewController.swift; sourceTree = "<group>"; };
 		7045EAC122D3E5C700867446 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		709B504622D9765E0018AD9C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		709B504922D9794D0018AD9C /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
 		70B46CE922D6F1F1006C6C63 /* DailyExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExerciseViewController.swift; sourceTree = "<group>"; };
 		70DC467222CD461A00C19D9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70DC467422CD49FD00C19D9B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		701E37CC22C9324A00E450A9 /* DefineUFitness */ = {
 			isa = PBXGroup;
 			children = (
+				709B504822D979010018AD9C /* Models */,
 				709B504522D976420018AD9C /* Util */,
 				70B46CEC22D6F975006C6C63 /* Nutrition */,
 				70B46CEB22D6F96B006C6C63 /* Exercises */,
@@ -172,6 +175,14 @@
 				709B504622D9765E0018AD9C /* Color.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		709B504822D979010018AD9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				709B504922D9794D0018AD9C /* DailyExercise.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		70B46CEB22D6F96B006C6C63 /* Exercises */ = {
@@ -480,6 +491,7 @@
 				701E380022C940B700E450A9 /* NutritionViewController.swift in Sources */,
 				701E37CE22C9324A00E450A9 /* AppDelegate.swift in Sources */,
 				701E37FE22C9345B00E450A9 /* ExerciseDayTableViewCell.swift in Sources */,
+				709B504A22D9794D0018AD9C /* DailyExercise.swift in Sources */,
 				70B46CEA22D6F1F1006C6C63 /* DailyExerciseViewController.swift in Sources */,
 				701E37D022C9324A00E450A9 /* FirstViewController.swift in Sources */,
 			);

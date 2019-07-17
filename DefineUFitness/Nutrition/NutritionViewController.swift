@@ -31,9 +31,18 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    func setUpUI(){
+        tableSetUp()
+        self.navigationController?.navigationBar.barTintColor = .init(red: 204.0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSetUp()
+        setUpUI()
         //self.navigationController?.navigationItem.hidesBackButton = true
         //self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.

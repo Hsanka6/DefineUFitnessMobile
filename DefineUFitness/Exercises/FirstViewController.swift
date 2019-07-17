@@ -17,9 +17,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
     }
     
+    func setUpUI(){
+        setUpTable()
+        self.navigationController?.navigationBar.barTintColor = .init(red: 204.0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTable()
+        setUpUI()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

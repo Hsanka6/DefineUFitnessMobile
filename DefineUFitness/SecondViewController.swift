@@ -24,9 +24,15 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    func setUpUI(){
+        locationSetup()
+        self.navigationController?.navigationBar.barTintColor = .init(red: 204.0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationSetup()
+        setUpUI()
         
         
         // Do any additional setup after loading the view, typically from a nib.
