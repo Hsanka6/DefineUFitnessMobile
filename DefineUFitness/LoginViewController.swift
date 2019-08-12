@@ -26,18 +26,8 @@ class LoginViewController: UIViewController,GIDSignInDelegate, GIDSignInUIDelega
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
 
-//        setUpGoogleButton()
-       
-//        GIDSignIn.sharedInstance().uiDelegate = self
-//        GIDSignIn.sharedInstance().signIn()
-//        // Do any additional setup after loading the view.
     }
-    
-//    fileprivate func setUpGoogleButton(){
-//        let googleButton = GIDSignInButton()
-//        googleButton.frame = CGRect(x: 16, y: 116+66, width: self.view.frame.width - 32, height: 50)
-//        self.view.addSubview(googleButton)
-//    }
+    //google auth setup in here and app delegate if you need to change something
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
@@ -58,7 +48,6 @@ class LoginViewController: UIViewController,GIDSignInDelegate, GIDSignInUIDelega
     }
     // Start Google OAuth2 Authentication
     func sign(_ signIn: GIDSignIn?, present viewController: UIViewController?) {
-        
         // Showing OAuth2 authentication window
         if let aController = viewController {
             present(aController, animated: true) {() -> Void in }
